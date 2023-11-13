@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
 			else if((strcmp(argv[1], "-p")) == 0) {
 				op_PprintStat(path, d -> d_name, &st);
 			}
-			else {
+			else if((strcmp(argv[1], "-Q")) == 0) {
 				op_QprintStat(path, d -> d_name, &st);
 			}
 		}

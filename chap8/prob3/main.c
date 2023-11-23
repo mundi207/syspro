@@ -1,17 +1,16 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int main(int argc, char *argv[]) {
+int main(void) {
 	char *ptr;
 
 	ptr = getenv("HOME");
-	printf("HOME = %s\n", ptr);
+	printf("%s\n", ptr);
 
 	ptr = getenv("SHELL");
-	printf("SHELL = %s\n", ptr);
+	printf("%s\n", ptr);
 
-	ptr = getenv("PATH");
-	printf("SHELL = %s\n", ptr);
+	printf("%s\n", getenv("PATH"));
 
-	exit(0);
+	return 0;
 }

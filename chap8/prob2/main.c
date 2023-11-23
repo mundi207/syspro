@@ -1,12 +1,12 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int main(int argc, char *argv[]) {
+int main(void) {
 	extern char **environ;
-	char **ptr;
 
-	for(ptr = environ; ptr != 0; ptr ++) {
-		printf("%s \n", *ptr);
+	while(*environ != 0) {
+		printf("%s\n", *environ);
+		environ ++;
 	}
-	exit(0);
+	return 0;
 }

@@ -1,0 +1,27 @@
+sleep 100 & // 백그라운드로 sleep 명령어 실행
+sleep 100 & // 백그라운드로 sleep 명령어 실행
+
+jobs // 백그라운드에서 돌아가는 프로세스 확인
+
+[1]-  실행중               sleep 100 &
+[2]+  실행중               sleep 100 &
+
+ps –f // 프로세스 상세정보 출력
+
+UID          PID    PPID  C STIME TTY          TIME CMD
+mundi      24902   24901  0 14:20 pts/0    00:00:00 -bash
+mundi      24939   24902  0 14:21 pts/0    00:00:00 sleep 100
+mundi      24940   24902  0 14:21 pts/0    00:00:00 sleep 100
+mundi      24941   24902  0 14:21 pts/0    00:00:00 ps -f
+
+kill %1 // 1번 백그라운드 프로세스 종료
+
+[1]-  종료됨               sleep 100
+
+ps -f
+
+mundi      24902   24901  0 14:20 pts/0    00:00:00 -bash
+mundi      24945   24902  0 14:23 pts/0    00:00:00 sleep 100
+mundi      24946   24902  0 14:23 pts/0    00:00:00 ps -f
+
+1번 백그라운드 프로세스가 종료된 거 확인

@@ -1,0 +1,16 @@
+(echo START1; sleep 10; echo DONE1) &
+START1를 쉘에 출력하고, 10초 뒤에 DONE1을 출력한다.
+(이걸 백그라운드로 실행함)
+
+(echo START2; sleep 10; echo DONE2) &
+START2를 쉘에 출력하고, 10초 뒤에 DONE2를 출력한다.
+(이걸 백그라운드로 실행함)
+
+kill –KILL 첫 번째 프로세스
+첫 번째 프로세스 죽임
+
+kill –STOP 첫 번째 프로세스
+첫 번째 프로세스 일시정지
+
+kill –CONT 첫 번째 프로세스
+일시정지 했던 프로세스를 다시 실행시킴

@@ -15,6 +15,7 @@ int main(void) {
 			if(buf[i] == '\n') {
 				buf[i + 1] = '\0';
 				system(buf);
+				rewind(stdin);
 				free(buf);
 				break;
 			}
